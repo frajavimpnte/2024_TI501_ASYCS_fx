@@ -39,7 +39,14 @@ public class ComplexNumberTest {
         for (int i = 0; i < z.length; i++) {
             ComplexNumber r = z[i].mult(z[i]).add( new ComplexNumber(0, 1));
             System.out.println("w" + i + " = " + r.toString());
-        }  
+        }
+        
+        // Function w = f(z) = exp (z)
+        System.out.println("w = f(z) =   exp (z)  -----------------------------");
+        for (int i = 0; i < z.length; i++) {
+            ComplexNumber r = ComplexNumber.exp(z[i]);
+            System.out.println("w" + i + " = " + r.toString());
+        }
     }
     
     public static void P4d() {

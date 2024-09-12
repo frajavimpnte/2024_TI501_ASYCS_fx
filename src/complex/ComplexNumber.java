@@ -138,5 +138,16 @@ public class ComplexNumber {
     public String toStringPolar() {
         return "ComplexNumber{" + "mod=" + mod + ", arg=" + arg + '}';
     }
+    
+    public ComplexNumber exp() {
+        return new ComplexNumber ( 
+                (float) (Math.exp(a)*Math.cos(b)),
+                (float) (Math.exp(a)*Math.sin(b)));
+    }
+    
+    public static ComplexNumber exp(ComplexNumber c) {
+        return new ComplexNumber ( 
+                (float) (Math.exp(c.a)*Math.cos(c.b)),
+                (float) (Math.exp(c.a)*Math.sin(c.b)));
+    }
 }
-
